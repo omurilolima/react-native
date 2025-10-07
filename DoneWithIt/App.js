@@ -13,10 +13,22 @@ export default function App() {
       <View
         style={{
           backgroundColor: 'dodgerblue',
-          width: '100%',
-          height: landscape ? '100%' : '30%', // if landscape, take full height, else take 30% height
+          flex: 1,
         }}
-      ></View>
+      >
+        <View style={{
+          backgroundColor: 'green',
+          flex: 1,
+        }}/>
+        <View style={{
+          backgroundColor: 'yellow',
+          flex: 1,
+        }}/>
+        <View style={{
+          backgroundColor: 'blue',
+          flex: 1,
+        }}/>
+      </View>
     </SafeAreaView>
   );
 }

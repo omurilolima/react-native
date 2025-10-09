@@ -2,23 +2,22 @@ import { View, StyleSheet, Alert, TouchableWithoutFeedback, TouchableHighlight, 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
 
-// install npm i @react-native-community/hooks
-// change the app.json file to set the orientation to "default" to enable both orientations
-
 export default function App() {
-  const {landscape} = useDeviceOrientation(); // returns an object with landscape and portrait boolean values
+  const {landscape} = useDeviceOrientation();
   
   return (
     <SafeAreaView style={styles.container}>
       <View
         style={{
-          backgroundColor: 'dodgerblue',
+          backgroundColor: 'white',
           flex: 1,
-          flexDirection: 'row',
+          flexDirection: 'row', // main axis = row -> horizontal
+          justifyContent: 'center', // align content along main axis, in this case horizontal
+          alignItems: 'center', // align content along secondary axis, in this case vertical
         }}
       >
         <View style={{
-          backgroundColor: 'green',
+          backgroundColor: 'dodgerblue',
           width: 100,
           height: 100,
         }}/>
@@ -28,7 +27,7 @@ export default function App() {
           height: 100,
         }}/>
         <View style={{
-          backgroundColor: 'blue',
+          backgroundColor: 'orange',
           width: 100,
           height: 100,
         }}/>
